@@ -9,6 +9,8 @@
 
 body{
     color: #fff;
+    background: #09001d;
+    overflow: hidden;
 }
 
 .header{
@@ -51,10 +53,24 @@ body{
     background: url('background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    pointer-events: auto;
+    transition: .3s ease;
+}
+
+.main.active{
+    filter: blur(15px);
+    pointer-events: none;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 200%;
 }
 
 .home{
-    height: 100vh;
+    position: relative;
+    left: -50%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -106,13 +122,20 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.9);
     width: 500px;
     background-color: #fff;
     border-radius: 6px;
     padding: 10px 25px;
     opacity: 0;
     pointer-events: none;
+    transition: .3s ease;
+}
+
+.popup-info.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-info h2{
@@ -169,4 +192,11 @@ body{
 .popup-info .btn-group .info-btn:nth-child(2):hover{
     background: #950170;
     border-color: #950170;
+}
+
+.quiz-section{
+    position: relative;
+    left: -40%;
+    width: 100%;
+    background-color: seagreen;
 }
