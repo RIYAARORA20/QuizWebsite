@@ -442,3 +442,21 @@ body{
     background: transparent;
     color: #c40094;
 }
+
+.feedback{
+    height: 30px;
+    width: 250px;
+    background-color: pink;
+    color: #c40094;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    border: 2px solid ;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #c40094;
+}
